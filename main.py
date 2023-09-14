@@ -199,7 +199,3 @@ CTkButton(window, text='CALCULAR', command=bt_onclick, width=95, height=40).pack
 
 window.mainloop()
 
-
-
-
-
