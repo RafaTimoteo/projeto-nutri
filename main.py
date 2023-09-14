@@ -176,21 +176,43 @@ def bt_onclick():
 
     #Janela de Resultados
     resultados = CTkToplevel(window)
-    resultados.geometry('800x700')
+    resultados.geometry('350x500')
     resultados.title('Resultados')
 
+    #FAO resultados
     fao_output = Frame(resultados, 550, 320)
     fao_output.pack(padx=10, pady=10)
 
+    fao_titulo = Label(fao_output, 'Segundo a FAO/OMS', 'arial bold', 18, 'bold')
+    fao_titulo.pack(padx=10, pady=10)
+
+    imc_output = Label(fao_output, f'Índice de Massa Corporal: {imc:.1f}', 'arial bold', 15, 'normal')
+    imc_output.pack(padx=10, pady=10)
+
+    tmb_fao_output = Label(fao_output, f'Taxa de Metabolismo Basal: {tmb_fao}', 'arial bold', 15, 'normal')
+    tmb_fao_output.pack(padx=10, pady=10)
+
+    get_fao_output = Label(fao_output, f'Gasto energético total: {get_fao}', 'arial bold', 15, 'normal')
+    get_fao_output.pack(padx=10, pady=10)
+
+    #Harris Resultados
     harris_output = Frame(resultados, 550, 320)
     harris_output.pack(padx=10, pady=10)
 
-    #FAO resultados
-    fao_titulo = Label(fao_output, 'Segundo a FAO/OMS', 'arial bold', 16, 'bold')
-    fao_titulo.pack()
+    harris_titulo = Label(harris_output, 'Segundo Harris Bennedict', 'arial bold', 18, 'bold')
+    harris_titulo.pack(padx=10, pady=10)
 
-    imc_output = Label(fao_output, 'Índice de Massa Corporal', 'arial bold', 12, 'normal')
-    imc_output.pack()
+    imc_harris_output = Label(harris_output, f'Índice de Massa Corporal: {imc:.1f}', 'arial bold', 15, 'normal')
+    imc_harris_output.pack(padx=10, pady=10)
+
+    tmb_harris_output = Label(harris_output, f'Taxa de Metabolismo Basal: {tmb_harris}', 'arial bold', 15, 'normal')
+    tmb_harris_output.pack(padx=10, pady=10)
+
+    get_harris_output = Label(harris_output, f'Gasto Energético Total: {get_harris}', 'arial bold', 15, 'normal')
+    get_harris_output.pack(padx=10, pady=10)
+    
+
+
 
 
 
