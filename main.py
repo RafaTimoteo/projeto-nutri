@@ -176,7 +176,7 @@ def bt_onclick():
 
     #Janela de Resultados
     resultados = CTkToplevel(window)
-    resultados.geometry('350x500')
+    resultados.geometry('400x550')
     resultados.title('Resultados')
 
     #FAO resultados
