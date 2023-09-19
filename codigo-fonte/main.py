@@ -211,11 +211,6 @@ def bt_onclick():
     get_harris_output = Label(harris_output, f'Gasto Energético Total: {get_harris}', 'arial bold', 15, 'normal')
     get_harris_output.pack(padx=10, pady=10)
     
-
-
-
-
-
 CTkButton(window, text='CALCULAR', command=bt_onclick, width=95, height=40).pack(padx=15, pady=15)
 
 
