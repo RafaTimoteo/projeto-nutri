@@ -146,27 +146,29 @@ def bt_onclick():
     #imc
     imc = peso / (alturaM**2)
 
-    #imc desrregulado
-    if imc > 27:
+    #Taxa de Metabolismo Basal
+    if imc >= 27:
         if sex == 'M':
             pi = 22
         elif sex == 'F':
             pi = 21
         pa = (peso - pi) * 0.25 + pi
+        
+        tmb_fao = fao(sex, idade, pa)
+        tmb_harris = harris(sex, idade, pa, alturacm)
+
     elif imc < 18:
         if sex == 'M':
             pi = 22
         elif sex == 'F':
             pi = 21
         pa = (pi - peso) * 0.25 + peso
-    else:
-        pa = peso
-
-    #Taxa de Metabolismo Basal
-    if imc > 27 or imc < 18:
+        
         tmb_fao = fao(sex, idade, pa)
         tmb_harris = harris(sex, idade, pa, alturacm)
+
     else:
+        pa = peso
         tmb_fao = fao(sex, idade, peso)
         tmb_harris = harris(sex, idade, peso, alturacm)
 
